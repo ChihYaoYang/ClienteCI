@@ -53,7 +53,7 @@
                     <?php
                     foreach ($vendas as $v) {
                         echo '<tr class="text-center">';
-                        echo '<td>' . $v->idCliente . '</td>';
+                        echo '<td>' . $v->nome . '</td>';
                         echo '<td>' . $v->data . '</td>';
                         echo '<td>' . $v->valor . ' R$' . '</td>';
                         echo '</tr>';

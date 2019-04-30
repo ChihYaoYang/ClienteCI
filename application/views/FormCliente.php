@@ -22,10 +22,11 @@
                             <a href="<?= $this->config->base_url() . 'Cliente/cadastrar' ?>" class="dropdown-item">Cadastrar</a>
                         </div>
                     </li>
-                </ul>
-                 <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link" href="<?= base_url() . 'Venda/listar'; ?>">Vendas</a>
                     </li>
+                </ul>
+                 
                 <ul class="navbar-nav justify-content-end">
                     <li class="nav-item"><a class="nav-link text-light" href="<?= base_url() . 'Usuario/sair' ?>">
                             Sair  <i class="fas fa-sign-out-alt"></i></a>
