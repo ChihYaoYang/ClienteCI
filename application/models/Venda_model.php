@@ -14,9 +14,9 @@ class Venda_model extends CI_Model {
         $this->db->from('venda');
         
         //Realiza o inner join com a tabela cliente
-        //Primeiro parametro DB da tabela - 
-        //Segundo parametro é os campos que se relacionam
-        //Terceiro parametor é o tipo de join('inner','left','right')
+        //1º parametro DB da tabela - 
+        //2º parametro é os campos que se relacionam
+        //3º parametor é o tipo de join('inner','left','right')
         $this->db->join('cliente', 'cliente.id = venda.idCliente', 'inner');
         
         //Nome da tabela no DB

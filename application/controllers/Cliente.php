@@ -2,8 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 //Todo controller do codeigniter precisa extender(ser filho) da classe CI_Controller
 class Cliente extends CI_Controller {
-    //Método constructor que é chamado sempre que a
-    //classe Cliente for usada, ou seja, "Instanciada"
+    //Método constructor que é chamado sempre que a classe Cliente for usada, ou seja, "Instanciada"
     public function __construct() {
         //Chama o constructor da classe pai(CI_Controller)
         parent::__construct();
@@ -19,6 +18,8 @@ class Cliente extends CI_Controller {
 
     //Read
     public function listar() {
+        //Carrega Menu
+        $this->load->view('includes/header');
         //Carregar o model pelo nome      - apelido
         $this->load->model('Cliente_model', 'cm');
         //$data precisa ser em formato de array para ser passada para a view
@@ -27,10 +28,14 @@ class Cliente extends CI_Controller {
         //Carrega a view passando o conteúdo da 
         //variável $data
         $this->load->view('ListaCliente', $data);
+        //Carrega rodapé
+        $this->load->view('includes/footer');
     }
 
     //Create
     public function cadastrar() {
+        //Carrega Menu
+        $this->load->view('includes/header');
         //Cria as regras de validação do formulário
         $this->form_validation->set_rules('nome', 'nome', 'required');
         $this->form_validation->set_rules('rg', 'rg', 'required');
@@ -60,10 +65,14 @@ class Cliente extends CI_Controller {
                 redirect('Cliente/cadastrar');
             }
         }
+       //Carrega rodapé
+       $this->load->view('includes/footer');
     }
 
     //Update
     public function alterar($id) {
+        //Carrega Menu
+        $this->load->view('includes/header');
         if ($id > 0) {
             $this->load->model('Cliente_model');
             //Cria as regras de validação do formulário
@@ -98,6 +107,8 @@ class Cliente extends CI_Controller {
         } else {
             redirect('Cliente/listar');
         }
+        //Carrega rodapé
+        $this->load->view('includes/footer');
     }
 
     //Delete

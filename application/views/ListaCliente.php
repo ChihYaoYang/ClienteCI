@@ -10,34 +10,10 @@
 
     </head>
     <body>
-        <!---Menu--->
-        <nav class="navbar navbar-dark bg-primary navbar-expand-md">
-            <a class="navbar-brand" href="<?= $this->config->base_url(); ?>"><i class="fas fa-store"></i> Sistema Comércio</a>
-            <!---Menu mobile--->
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item dropdown">
-                        <a href="#" id="menuCliente" class="nav-link dropdown-toggle" data-toggle="dropdown">Clientes</a>
-                        <div class="dropdown-menu" aria-labelledby="menuCliente">
-                            <a href="<?= $this->config->base_url() . 'Cliente/listar' ?>" class="dropdown-item">Listar</a>
-                            <a href="<?= $this->config->base_url() . 'Cliente/cadastrar' ?>" class="dropdown-item">Cadastrar</a>
-                        </div>
-                    </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url() . 'Venda/listar'; ?>">Vendas</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav justify-content-end">
-                    <li class="nav-item"><a class="nav-link text-light" href="<?= base_url().'Usuario/sair' ?>">
-                           Sair  <i class="fas fa-sign-out-alt"></i></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
         <div class="container mt-3">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?= $this->config->base_url(); ?>">Home</a></li>
+                    <li class="breadcrumb-item"><a href="<?= base_url(); ?>">Home</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Lista de Cliente</li>
                 </ol>
             </nav>

@@ -10,8 +10,10 @@ class Venda extends CI_Controller {
         $this->Usuario_model->verificaLogin();
     }
     public function listar() {
+        $this->load->view('includes/header');
         $dados['vendas'] = $this->Venda_model->getAll();
         $this->load->view('ListaVendas' , $dados);
+        $this->load->view('includes/footer');
     }
 }
 ?>
