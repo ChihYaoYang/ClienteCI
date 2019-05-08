@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Sistema Comércio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!---Bootstrap CSS--->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <!--Fontawesome--->
@@ -13,7 +14,10 @@
         <nav class="navbar navbar-dark btn-primary  navbar-expand-md">
             <a class="navbar-brand" href="<?= $this->config->base_url(); ?>"><i class="fas fa-store"></i>Sistema Comércio</a>
             <!---Menu mobile--->
-            <div class="collapse navbar-collapse">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item dropdown">
                         <a href="#" id="menuCliente" class="nav-link dropdown-toggle text-white" data-toggle="dropdown">Clientes</a>
